@@ -1,0 +1,15 @@
+[package]
+name = "web-bean"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sqlx = { version = "0.6.2", features = ["runtime-tokio-native-tls", "mysql"] }
+tokio = { version = "1.21.2", features = ["full"] }
+hyper = {version = "0.14", features = ["full"]}
+serde = {version = "1.0.93", features = ["derive"]}
+serde_json = {version = "1.0.93"}
+axum = { version = "0.6.6", features = ["multipart"] }
+reqwest = { version = "0.11", features = ["json", "blocking"] }
